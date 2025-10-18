@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/hacker-svgrepo-com.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Azizkhan - Software Engineer</title>
+    <meta name="description" content="Interactive terminal portfolio of AlAzizkhan, a passionate Software Engineer specializing in full-stack development and modern web technologies." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+        background: #000000;
+        color: #00ff00;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Loading screen */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .loading-text {
+        font-size: 18px;
+        color: #00ff00;
+        margin-bottom: 20px;
+        animation: pulse 1.5s infinite;
+      }
+      
+      .loading-bar {
+        width: 300px;
+        height: 4px;
+        background: #003300;
+        border-radius: 2px;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .loading-progress {
+        height: 100%;
+        background: linear-gradient(90deg, #00ff00, #00cc00);
+        border-radius: 2px;
+        animation: loadingProgress 2s ease-in-out;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      
+      @keyframes loadingProgress {
+        0% { width: 0%; }
+        100% { width: 100%; }
+      }
+      
+      /* Matrix background effect */
+      .matrix-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        z-index: -1;
+      }
+      
+      .matrix-char {
+        position: absolute;
+        color: #00ff00;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        opacity: 0.3;
+        animation: matrixFall linear infinite;
+      }
+      
+      @keyframes matrixFall {
+        0% {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Matrix Background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loading">
+      <div class="loading-text">Initializing terminal...</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Matrix background effect
+      function createMatrixRain() {
+        const matrixBg = document.getElementById('matrixBg');
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        
+        function createChar() {
+          const char = document.createElement('div');
+          char.className = 'matrix-char';
+          char.textContent = chars[Math.floor(Math.random() * chars.length)];
+          char.style.left = Math.random() * 100 + '%';
+          char.style.animationDuration = (Math.random() * 3 + 2) + 's';
+          char.style.animationDelay = Math.random() * 2 + 's';
+          matrixBg.appendChild(char);
+          
+          setTimeout(() => {
+            if (char.parentNode) {
+              char.parentNode.removeChild(char);
+            }
+          }, 5000);
+        }
+        
+        // Create initial characters
+        for (let i = 0; i < 50; i++) {
+          setTimeout(createChar, Math.random() * 2000);
+        }
+        
+        // Continue creating characters
+        setInterval(createChar, 200);
+      }
+      
+      // Start matrix effect
+      createMatrixRain();
+      
+      // Remove loading screen after page loads
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          loading.style.opacity = '0';
+          loading.style.transition = 'opacity 0.5s ease';
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
