@@ -1,15 +1,15 @@
 export interface Command {
-  description: string;
-  output: string;
+   description: string;
+   output: string;
 }
 
 
 
 
 export const commands: Record<string, Command> = {
-  help: {
-    description: 'Show available commands',
-    output: `Available commands:
+   help: {
+      description: 'Show available commands',
+      output: `Available commands:
 about       - Learn about me
 projects    - View my projects
 skills      - See my technical skills
@@ -22,10 +22,10 @@ sudo        - Try to get root access
 clear       - Clear the terminal
 
 Type any command to continue...`
-  },
-  about: {
-    description: 'Learn about me',
-    output: `About Azizkhon
+   },
+   about: {
+      description: 'Learn about me',
+      output: `About Azizkhon
 ════════════════════════════
 
 I'm a highly versatile full-stack developer and AI engineer with expertise in:
@@ -64,10 +64,10 @@ I'm a highly versatile full-stack developer and AI engineer with expertise in:
 📍 Location: Samarkand, Uzbekistan
 💼 Current Focus: AI/ML Engineering & Full-stack Development
 🎓 Background: Information Technology + Music`
-  },
-  projects: {
-    description: 'View my projects',
-    output: `Recent Projects
+   },
+   projects: {
+      description: 'View my projects',
+      output: `Recent Projects
 ══════════════════════════
 
 🤖 Telegram Payment Platform
@@ -94,10 +94,10 @@ I'm a highly versatile full-stack developer and AI engineer with expertise in:
    • Original compositions and live performances
    • Technologies: DAWs, mixing consoles, effects processors
    • Features: Live instrumentation with DJ sets`
-  },
-  skills: {
-    description: 'See my technical skills',
-    output: `Technical Skills
+   },
+   skills: {
+      description: 'See my technical skills',
+      output: `Technical Skills
 ══════════════════════════
 
 🤖 AI/ML Development:
@@ -160,10 +160,10 @@ I'm a highly versatile full-stack developer and AI engineer with expertise in:
    Live Performance       ███████████  90%
    Audio Engineering      █████████    85%
    Music Production       ████████     80%`
-  },
-  experience: {
-    description: 'My work experience',
-    output: `Work Experience
+   },
+   experience: {
+      description: 'My work experience',
+      output: `Work Experience
 ══════════════════════════
 
 🏫 ZARMED University
@@ -181,12 +181,16 @@ I'm a highly versatile full-stack developer and AI engineer with expertise in:
    • Reduced security incidents significantly
    • Led cybersecurity awareness programs
 
-🍽️ Oq Amur Restaurant
-   📅 Mar 2021 - Feb 2023
-   • Audio Engineer & Guitarist
-   • Delivered high-quality live performances
-   • Managed sound systems and equipment
-   • Composed original music
+🏫 Buyuk Avlod Academy
+   📅 Dec 2025 – Present | Samarkand, Uzbekistan
+      • Head of Engineering & Technical Programs  
+         –leading IT & technical education 
+   📅(Jun 2025 – Dec 2025) 
+      • Full-Stack Programming & AI Instructor
+         – delivered hands-on training in Web Dev, AI, ML,
+           DevOps, and Cybersecurity for 40+ students
+      • Skills: Full-Stack Development, React, AI, ML, Docker, Git, Leadership, Mentorship
+
 
 💻 Freelance Developer
    📅 2023 - Present
@@ -195,18 +199,27 @@ I'm a highly versatile full-stack developer and AI engineer with expertise in:
    • Machine learning models
    • Cybersecurity consulting
    
+
+🍽️ Oq Amur Restaurant
+   📅 Mar 2021 - Feb 2023
+   • Audio Engineer & Guitarist
+   • Delivered high-quality live performances
+   • Managed sound systems and equipment
+   • Composed original music
+
+
    
 content Management:
   instagram: @alazizxan.exe
   github: https://github.com/Alazizxan
-  linkedin: linkedin.com/in/azizkhon-pulatov-27090b372`
-  },
-  contact: {
-    description: 'How to reach me',
-    output: `Contact Information
+  https://www.linkedin.com/in/alazizkhon/`
+   },
+   contact: {
+      description: 'How to reach me',
+      output: `Contact Information
 ══════════════════════════
 
-🌐 LinkedIn: linkedin.com/in/azizkhon-pulatov-27090b372
+🌐 https://www.linkedin.com/in/alazizkhon/
 📧 Email: pulatovazizxan@gmail.com
 📱 Instagram: @alazizxan.exe
  •  GitHub: github.com/Alazizxan
@@ -221,10 +234,10 @@ Open To:
 • Cybersecurity consulting
 • Music production collaborations
 • Technical mentorship opportunities`
-  },
-  education: {
-    description: 'My educational background',
-    output: `Education
+   },
+   education: {
+      description: 'My educational background',
+      output: `Education
 ══════════════════════════
 
 🎓 Information Technology
@@ -240,10 +253,10 @@ Open To:
    • Regular participation in tech bootcamps
    • Ongoing cybersecurity research
    • ML/AI course completion`
-  },
-  certifications: {
-    description: 'View my certifications',
-    output: `Certifications
+   },
+   certifications: {
+      description: 'View my certifications',
+      output: `Certifications
 ══════════════════════════
 
 🤖 AI/ML:
@@ -259,6 +272,45 @@ Open To:
    https://www.udemy.com/certificate/UC-4888008d-37f9-4563-8d5e-ea1815af307d/
 
 
+
+
+💻 Getting Started with Threat Intelligence and Hunting
+   • Issued by IBM SkillsBuild
+   • Badge ID: c6e9fbae-b7de-4813-914e-063ededaf984
+   https://www.credly.com/badges/c6e9fbae-b7de-4813-914e-063ededaf984/
+
+
+🔐 Getting Started with Cybersecurity
+   • Issued by IBM SkillsBuild
+   • Badge ID: e24859a9-06a4-4be2-8ffc-db1d80f42e15
+   https://www.credly.com/badges/e24859a9-06a4-4be2-8ffc-db1d80f42e15
+
+
+🤖 Создание агента ИИ с помощью Microsoft Foundry
+   Концепции искусственного интеллекта для разработчиков и специалистов по технологиям
+   • Issued by Microsoft
+   https://learn.microsoft.com/api/achievements/share/ru-ru/PulatovAZIZKHON-0977/HZQSAYC8?sharingId=F168C9FAFE11F9BE
+   https://learn.microsoft.com/api/achievements/share/ru-ru/PulatovAZIZKHON-0977/AKT3Q4K7?sharingId=F168C9FAFE11F9BE
+
+
+🤖 AI/ML:
+   • Full-Stack AI Engineer 2026: ML, Deep Learning, GenerativeAI
+   • Instructor: School of AI
+   • 33.5 total hours — 125 lectures
+   https://www.udemy.com/certificate/UC-f255bfda-c2f2-42d2-8a23-30ba789903c1/
+
+
+🤖 Data Science:
+   • Data Science: R Programming Complete Diploma
+   https://www.udemy.com/certificate/UC-744585de-bdec-41b5-ae35-ca80a7662265/
+
+
+🤖 AI/ML:
+   • Data Science and Machine Learning (Basic to Advanced)
+   https://www.udemy.com/certificate/UC-cdea1c71-e0e6-42bb-85bf-73025127f422/
+
+
+
 💻 Development:
    • Node.js Certified Developer
    • MongoDB University Courses
@@ -266,10 +318,10 @@ Open To:
 🎵 Audio:
    • Audio Engineering Workshops
    • Music Production Certifications`
-  },
-  music: {
-    description: 'My music career',
-    output: `Music Background
+   },
+   music: {
+      description: 'My music career',
+      output: `Music Background
 ══════════════════════════
 
 🎸 Performance:
@@ -291,10 +343,10 @@ Open To:
    • Consistently positive audience feedback
    • Technical excellence in sound quality
    • Ability to enhance venue ambiance`
-  },
-  sudo: {
-    description: 'Try to get root access',
-    output: `sudo: access denied
+   },
+   sudo: {
+      description: 'Try to get root access',
+      output: `sudo: access denied
 
 Nice try! 😄 But this is just a portfolio website.
 You don't need root access to explore my background.
@@ -306,9 +358,9 @@ Try using other commands like:
 • contact - Get in touch
 
 Remember: With great power comes great responsibility! 🎸`
-  },
-  clear: {
-    description: 'Clear the terminal',
-    output: 'clear'
-  }
+   },
+   clear: {
+      description: 'Clear the terminal',
+      output: 'clear'
+   }
 };

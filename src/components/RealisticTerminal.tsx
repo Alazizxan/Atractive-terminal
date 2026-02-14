@@ -111,7 +111,7 @@ export default function RealisticTerminal() {
           <h1 className="text-1xl font-bold text-green-400 tracking-wide">
             AL AZIZKHON
           </h1>
-          <p className="text-green-300 text-[0.7rem] opacity-80">
+          <p className="text-green-300 text-xs opacity-80">
             AI/ML Engineer | Full Stack Developer | Cybersecurity Expert
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function RealisticTerminal() {
       </div>
 
       {/* Command shortcuts */}
-      <div className="flex flex-wrap gap-2 mb-4 text-[0.6rem] border border-green-900/50 rounded-lg p-2 bg-green-950/10">
+      <div className="flex flex-wrap gap-2 mb-4 text-sm border border-green-900/50 rounded-lg p-2 bg-green-950/10">
         {Object.keys(commands).map((cmd) => (
           <button
             key={cmd}
@@ -144,7 +144,7 @@ export default function RealisticTerminal() {
       {/* Terminal output */}
       <div
         ref={terminalRef}
-        className="flex-1 overflow-y-auto mb-2 space-y-2 text-[0.6rem] leading-relaxed scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-gray-900 pr-2"
+        className="flex-1 overflow-y-auto mb-2 space-y-2 text-sm leading-relaxed scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-gray-900 pr-2"
       >
         {history.map((item, index) => (
           <div
@@ -171,7 +171,7 @@ export default function RealisticTerminal() {
               value={currentInput}
               onChange={(e) => setCurrentInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="ml-2 w-full bg-transparent border-none outline-none text-green-400 font-mono caret-green-400 text-[0.6rem]"
+              className="ml-2 w-full bg-transparent border-none outline-none text-green-400 font-mono caret-green-400 text-sm"
               autoComplete="off"
               spellCheck="false"
             />

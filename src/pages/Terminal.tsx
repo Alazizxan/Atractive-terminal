@@ -7,7 +7,7 @@ function Terminal() {
   return (
     <div className="min-h-screen bg-black text-green-400 font-mono overflow-hidden">
       <div className="hidden lg:flex h-screen">
-        <div className="w-[40%] relative bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div className="w-[40%] relative  bg-black">
           <PhysicsIDCard />
         </div>
 
